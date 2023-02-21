@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">TrackingTask</string>
+    <string name="welcome_title">Welcome to %s</string>
+    <string name="welcome_label">Let\'s get started</string>
+    <string name="continue_text">Continue</string>
+    <string name="register">Sing up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="failed_sign_in_error_alert_body">Failed to sign in.\nReason: %s</string>
+    <string name="onboarding_name_title">Who are you?</string>
+    <string name="onboarding_name_label">To personalise your account</string>
+    <string name="onboarding_name_hint">Name</string>
+    <string name="onboarding_gender_title">Which one are you?</string>
+    <string name="onboarding_gender_label">To calculate fitness score by gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="onboarding_weight_title">What is your weight, kg?</string>
+    <string name="onboarding_weight_label">To calculate fitness score by weight</string>
+    <string name="onboarding_birthday_title">What is your birthday?</string>
+    <string name="onboarding_birthday_label">To calculate fitness scope by age</string>
+    <string name="onboarding_finish">Get started</string>
+    <string name="onboarding_terms_text">I have read and accept %s</string>
+    <string name="onboarding_terms_link">Terms Of Use</string>
+    <string name="onboarding_terms_dialog_title">Terms Of Use</string>
+    <string name="current_score_title">Current score</string>
+    <string name="activity_score_text">%1$s / %2$s\nof your daily goal</string>
+    <string name="activity_walking_duration">Walking: %s</string>
+    <string name="activity_running_duration">Running: %s</string>
+    <string name="activity_other_duration">Other: %s</string>
+    <string name="sleep_score_text">%1$s / %2$s\nof your daily goal</string>
+    <string name="sleep_awake_duration">Awake: %s</string>
+    <string name="sleep_light_duration">Light sleep: %s</string>
+    <string name="sleep_deep_duration">Deep sleep: %s</string>
+    <string name="sleep_out_of_bed_duration">Out of bed: %s</string>
+    <string name="steps_score_text">%1$s / %2$s\nof your daily goal</string>
+    <string name="steps_calories">Burned %s cal</string>
+    <string name="steps_distance">Distance %s km</string>
+    <string name="current_score">%.0f</string>
+    <string name="current_score_steps">%1$s / %2$s</string>
+    <string name="current_score_sleep">%1$s / %2$s</string>
+    <string name="current_score_activity">%1$s / %2$s</string>
+    <string name="current_score_mood">%1$s / %2$s points</string>
+    <string name="user_age_placeholder">%s years</string>
+    <string name="activity_placeholder">Activity: %s</string>
+    <string name="steps_placeholder">Steps: %s</string>
+    <string name="sleep_placeholder">Sleep: %s</string>
+    <string name="user_weight_placeholder">%s kg</string>
+    <string name="about_score">About score</string>
+    <string name="about_score_text">
+        Score consists of four values: Activity, Mood, Steps and quality of Sleep.
+        Based on them, you have personalized score between 0 to 100. \nTo help you yo improve your mental state,
+        you have every day mood questionnaire.
+    For updating your goals, please, visit profile settings</string>
+    <string name="mood_score">Mood score</string>
+    <string-array name="score_values">
+        <item>Steps</item>
+        <item>Sleep</item>
+        <item>Activity</item>
+        <item>Mood</item>
+    </string-array>
+    <string name="mood_notification_title">Track your mood</string>
+    <string name="mood_notification_message">How do you feel today?</string>
+    <string name="your_goals">Your goals:</string>
+    <string name="update_lowercase">update</string>
+    <string name="statistic_category_activity">Activity</string>
+    <string name="statistic_category_steps">Steps</string>
+    <string name="statistic_category_sleep">Sleep</string>
+    <string name="log_out">Log out</string>
+    <string name="error_alert_button">Close</string>
+    <string name="demo_profile_badge">Demo</string>
+    <string name="demo_profile_badge_description">
+        You are not signed to Google Account and now you see demo steps, sleep and activity.\nOpen Profile tab and Sign In to Google to see your real data from Google Fit.
+    </string>
+</resources>

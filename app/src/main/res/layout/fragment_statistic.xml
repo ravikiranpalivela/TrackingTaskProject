@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scoreContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:entries="@array/score_values"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvPreviousCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:textColor="@color/cloudyBlue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnPreviousCategory"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="activity" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPreviousCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/softPurple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvCurrentCategory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCurrentCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_black"
+            android:textColor="@color/gunmetal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="steps" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNextCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_arrow_forward"
+            android:tint="@color/softPurple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentCategory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNextCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:textColor="@color/cloudyBlue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnNextCategory"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="sleep" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activityPeriodTV"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/rounded_period_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreContainer">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineFirst"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenter"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <TextView
+            android:id="@+id/dayB"
+            style="@style/StatisticsDateTabStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="day"
+            app:layout_constraintBottom_toBottomOf="@+id/weekB"
+            app:layout_constraintEnd_toStartOf="@id/guidelineFirst"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/weekB"
+            tools:background="@drawable/rounded_button"
+            tools:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/weekB"
+            style="@style/StatisticsDateTabStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="week"
+            app:layout_constraintBottom_toBottomOf="@+id/monthB"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+            app:layout_constraintStart_toEndOf="@id/guidelineFirst"
+            app:layout_constraintTop_toTopOf="@+id/monthB"
+            tools:textColor="@color/gunmetal" />
+
+        <TextView
+            android:id="@+id/monthB"
+            style="@style/StatisticsDateTabStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+            tools:layout_editor_absoluteY="0dp"
+            tools:textColor="@color/gunmetal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/score_values"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityPeriodTV">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPreviousDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/blueMain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:0"
+            app:layout_constraintEnd_toStartOf="@+id/tvCurrentDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_black"
+            android:textColor="@color/gunmetal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20-27 Jun" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_arrow_forward"
+            android:tint="@color/blueMain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
